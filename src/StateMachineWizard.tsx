@@ -32,7 +32,7 @@ const stateMachineConfig: StateMachineConfig<WizardState, StepNames> = {
       canAdvance: (state) => !!state.name // convertir en booleano !!
     },
     confirmation: {
-      canAdvance: () => true // convertir en booleano !!
+      canAdvance: () => true 
     }
   },
   views: {
@@ -64,13 +64,39 @@ const stateMachineConfig: StateMachineConfig<WizardState, StepNames> = {
   }
 }
 
-function App() {
+const getStateView = <T, V extends string>(
+  config: StateMachineConfig<T, V>,
+  stepName: V
+): React.ComponentType<{ state: T; setState: React.Dispatch<React.SetStateAction<T>>}> => config.views[stepName];
+
+const StateMachineWizard = () => {
+  const [wizardState, setWizardState] = useState<WizardState>({ name: "", age: 0 })
+  const [currentStep, setCurrentState] = useState<StepNames>(stateMachineConfig.initialStep)
+
+  const StepComponent = getStateView(stateMachineConfig, currentStep);
+
+  const handleNext = () => {
+    const canAdvance = stateMachineConfig.steps[currentStep].canAdvance(wizardState);
+
+    if (canAdvance) {
+      if (currentStep == "step1") setCurrentState("step2");
+      else if (currentStep == "step2") setCurrentState("confirmation");
+    } else {
+      alert("You can't moved forward yet.")
+    }
+  }
 
   return (
-    <>
-      
-    </>
+    <section>
+      <h1>State Machine Wizard 🐍</h1>
+      <StepComponent state={ wizardState } setState={ setWizardState } />
+      {
+        currentStep !== "confirmation" && (
+          <button onClick={ handleNext }>Next</button>
+        )
+      }
+    </section>
   )
-}
+};
 
-export default App
+export default StateMachineWizard
