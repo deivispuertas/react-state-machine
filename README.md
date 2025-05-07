@@ -1,54 +1,52 @@
-# React + TypeScript + Vite
+# 🔄 State Machine Wizard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación de tipo **wizard** construida con **React + Vite** y **TypeScript**, que utiliza una **máquina de estados** para controlar el flujo entre pasos.
 
-Currently, two official plugins are available:
+Permite al usuario ingresar su nombre y edad paso a paso hasta mostrar una confirmación final.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Repositorio del proyecto en GitHub:  
+👉 [https://github.com/deivispuertas/react-state-machine](https://github.com/deivispuertas/react-state-machine)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ✨ Características
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Interfaz amigable y minimalista.
+- Flujo guiado paso a paso mediante una **máquina de estados finita**.
+- Cada paso es un componente React diferente.
+- Validaciones por paso para controlar cuándo se puede avanzar.
+- Tipado fuerte con **TypeScript** para mayor robustez.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Pasos incluidos:
+1. Ingreso del nombre completo.
+2. Ingreso de la edad.
+3. Confirmación final con resumen.
+
+---
+
+## 📦 Tecnologías
+<img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React" width="48" height="48" />
+<img src="https://vitejs.dev/logo.svg" alt="Vite" width="48" height="48" />
+<img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" alt="TypeScript" width="48" height="48" />
+
+
+---
+
+## 🛠️ Cómo clonar y correr el proyecto
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/deivispuertas/react-state-machine.git
+
+# 2. Entrar al directorio
+cd react-state-machine
+
+# 3. Instalar dependencias
+npm install
+
+# 4. Ejecutar el servidor local
+npm run dev
