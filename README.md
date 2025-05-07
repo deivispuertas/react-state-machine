@@ -29,9 +29,7 @@ Pasos incluidos:
 ---
 
 ## 📦 Tecnologías
-<img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React" width="48" height="48" />
-<img src="https://vitejs.dev/logo.svg" alt="Vite" width="48" height="48" />
-<img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" alt="TypeScript" width="48" height="48" />
+<img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React" width="48" height="48" /> <img src="https://vitejs.dev/logo.svg" alt="Vite" width="48" height="48" /> <img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" alt="TypeScript" width="48" height="48" />
 
 
 ---
