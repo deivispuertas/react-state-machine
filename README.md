@@ -10,7 +10,8 @@ Permite al usuario ingresar su nombre y edad paso a paso hasta mostrar una confi
 
 Repositorio del proyecto en GitHub:  
 👉 [https://github.com/deivispuertas/react-state-machine](https://github.com/deivispuertas/react-state-machine)
-
+Link del Proyecto:
+👉 [https://deivispuertas.github.io/react-state-machine/]
 ---
 
 ## ✨ Características
